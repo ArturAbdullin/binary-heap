@@ -44,5 +44,32 @@ class MinHeap {
    * Add a number to the heap.
    * @param {number} num
    */
-  push(num) {}
+  push(num) {
+    if (this.#currSize + 1 > this.#maxHeapSize) {
+      return false;
+    }
+
+    this.#currSize++;
+    this.#heap[this.#currSize] = num;
+
+    this.#heapifyUp(this.#currSize);
+    return true;
+  }
+
+  /**
+   * Traverse up the heap to find a suitable place for the number at index `idx`.
+   * @param {number} idx index.
+   */
+  #heapifyUp(idx) {
+    let childIdx = idx;
+    let parentIdx = Math.floor(childIdx / 2);
+
+    while (childIdx > 1 && this.#heap[parentIdx] > this.#heap[childIdx]) {
+      [this.#heap[parentIdx], this.#heap[childIdx]] = [
+        this.#heap[childIdx],
+        this.#heap[parentIdx],
+      ];
+      [childIdx, parentIdx] = [parentIdx, Math.floor(childIdx / 2)];
+    }
+  }
 }
