@@ -10,9 +10,9 @@ class MinHeap {
    */
   constructor(maxSize) {
     /**
-     * @type {(number | null)[]}
+     * @type {(number | undefined)[]}
      */
-    this.#heap = new Array(maxSize + 1).fill(null);
+    this.#heap = new Array(maxSize + 1).fill(undefined);
     this.#maxHeapSize = maxSize == undefined || maxSize < 0 ? 0 : maxSize;
     this.#currSize = 0;
   }
@@ -32,11 +32,11 @@ class MinHeap {
   }
 
   /**
-   * Return the top min heap number or null if the heap is empty.
-   * @returns {number | null} min number or null.
+   * Return the top min heap number or `undefined` if the heap is empty. The heap is not modified.
+   * @returns {number | undefined} min number or `undefined`.
    */
   peek() {
-    if (this.#currSize <= 0) return null;
+    if (this.#currSize <= 0) return undefined;
     else return this.#heap[1];
   }
 
