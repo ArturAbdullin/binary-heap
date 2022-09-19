@@ -43,6 +43,7 @@ class MinHeap {
   /**
    * Add a number to the heap.
    * @param {number} num
+   * @returns {boolean} `true` if the heap size is not exceeded, or `false` otherwise. 
    */
   push(num) {
     if (this.#currSize + 1 > this.#maxHeapSize) {
