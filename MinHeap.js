@@ -69,7 +69,7 @@ class MinHeap {
         this.#heap[childIdx],
         this.#heap[parentIdx],
       ];
-      [childIdx, parentIdx] = [parentIdx, Math.floor(childIdx / 2)];
+      [childIdx, parentIdx] = [parentIdx, Math.floor(parentIdx / 2)];
     }
   }
 
