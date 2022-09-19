@@ -1,0 +1,24 @@
+{
+  "name": "binary-heaps",
+  "version": "1.0.0",
+  "description": "binary heaps study",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArturAbdullin/binary-heap.git"
+  },
+  "keywords": [
+    "heap",
+    "binary-heap",
+    "priority-queue"
+  ],
+  "author": "Artur Abdullin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ArturAbdullin/binary-heap/issues"
+  },
+  "homepage": "https://github.com/ArturAbdullin/binary-heap#readme"
+}
