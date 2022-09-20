@@ -10,7 +10,7 @@ class PriorityQueue {
    * @param {(newNode: any, parentNode: any) => boolean} [compareFn]
    * `compareFn` - used to determine the order (priority) of the nodes in a heap. It is expected to return a `boolean` value. When `true` is returned, it means that `newNode` has a higher priority than `parentNode`. If omitted, the nodes prioritized according the function (`min-heap`):
    *```ts
-   * constructor((newNode, parentNode) => newNode > parentNode)
+   * constructor((newNode, parentNode) => newNode < parentNode)
    * ```
    */
   constructor(compareFn) {
