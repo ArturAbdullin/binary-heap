@@ -2,8 +2,8 @@
 ## About
 This repo is for studying binary heaps.
 
-## MinHeap
-The `MinHeap` class implements a basic min-heap data structure. It uses a `one-based indexed array` as a data container.
+## Heaps
+The `MaxHeap` and `MinHeap` classes implement a basic heap data structure. They use a `one-based indexed array` as a data container.
 
 ### Constructor
 A constructor requires the maximum number of elements in a heap.
@@ -14,8 +14,8 @@ A constructor requires the maximum number of elements in a heap.
 
 ### Methods
 - `push(num: number)` - Add a number to the heap. Returns `true` if the heap size is not exceeded, or `false` otherwise.
-- `pop(): number | undefined` - Removes the min-heap element and returns it. If the heap is empty returns `undefined` and the heap is not modified.
-- `peek(): number | undefined` - Returns the top min-heap number or `undefined` if the heap is empty. The heap is not modified.
+- `pop(): number | undefined` - Removes the min(max)-heap element and returns it. If the heap is empty returns `undefined` and the heap is not modified.
+- `peek(): number | undefined` - Returns the top min(max)-heap number or `undefined` if the heap is empty. The heap is not modified.
 
 ### Utility methods (private)
 - `#heapifyUp(idx: number)` (iterative) - Traverse up the heap to find a suitable place for the number at index `idx`. The method is implemented in the `push()` method.
