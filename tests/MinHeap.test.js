@@ -1,4 +1,4 @@
-const MinHeap = require("./MinHeap");
+const MinHeap = require("../MinHeap");
 
 /**
  * Initialize a min-heap.
@@ -46,7 +46,6 @@ function checkMinValueAfterPop({ maxSize, pops, nums }) {
   for (let i = 0; i < pops; i++) {
     result.push(minHeap.pop());
   }
-  console.log(result);
   return result;
 }
 
