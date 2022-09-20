@@ -1,4 +1,4 @@
-const MinHeap = require("../MinHeap");
+const MinHeap = require("../src/MinHeap");
 
 /**
  * Initialize a min-heap.
