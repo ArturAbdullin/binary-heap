@@ -4,20 +4,20 @@
 class PriorityQueue {
   #currSize;
   #heap;
-  /**@type {(newNode: any, neighborNode: any) => boolean}*/
+  /**@type {(childNode: any, neighborNode: any) => boolean}*/
   #compareFn;
   /**
-   * @param {(newNode: any, parentNode: any) => boolean} [compareFn]
-   * `compareFn` - used to determine the order (priority) of the nodes in a heap. It is expected to return a `boolean` value. When `true` is returned, it means that `newNode` has a higher priority than `parentNode`. If omitted, the nodes prioritized according the function (`min-heap`):
+   * @param {(childNode: any, parentNode: any) => boolean} [compareFn]
+   * `compareFn` - used to determine the order (priority) of the nodes in a heap. It is expected to return a `boolean` value. When `true` is returned, it means that `childNode` has a higher priority than `parentNode`. If omitted, the nodes prioritized according the function (`min-heap`):
    *```ts
-   * constructor((newNode, parentNode) => newNode < parentNode)
+   * constructor((childNode, parentNode) => childNode < parentNode)
    * ```
    */
   constructor(compareFn) {
     this.#compareFn =
       compareFn !== undefined
         ? compareFn
-        : (newNode, parentNode) => newNode < parentNode;
+        : (childNode, parentNode) => childNode < parentNode;
     /**
      * @type {(any | undefined)[]}
      */
