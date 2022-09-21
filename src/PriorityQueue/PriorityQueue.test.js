@@ -1,4 +1,4 @@
-const PriorityQueue = require("../src/PriorityQueue");
+const PriorityQueue = require("./PriorityQueue");
 
 /**
  * Initialize a PriorityQueue instance.

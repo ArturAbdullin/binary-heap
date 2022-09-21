@@ -1,4 +1,4 @@
-const MaxHeap = require("../src/MaxHeap");
+const MaxHeap = require("./MaxHeap");
 
 /**
  * Initialize a max-heap.
